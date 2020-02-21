@@ -1,0 +1,60 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">CARGA TU PLATO</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-toolbar id="pyro2"> 
+        <div class="before"></div>
+        <div class="after"></div>
+        <div class="before"></div>
+        <div class="after"></div>
+        <ion-grid class="ion-no-padding">
+            <ion-row>
+            	<div class="div_cent divAddPhoto" id="divAddPhoto">
+            		<ion-icon name="add-circle" class="iconAdd" (click)="presentActionSheet()"></ion-icon>
+            	</div>
+            </ion-row>
+        </ion-grid>
+        <div class="before"></div>
+        <div class="after"></div>
+        <div class="before"></div>
+        <div class="after"></div>
+        <ion-grid>
+        	<ion-row>
+        		<ion-col size="1"></ion-col>
+        		<ion-col size="10">
+        			<div class="divTock">
+        				<h4>
+        					Hablanos de tu receta
+        				</h4>
+        			</div>
+        		</ion-col>
+        	</ion-row>
+        </ion-grid>
+        <div class="before"></div>
+        <div class="after"></div>
+        <div class="before"></div>
+        <div class="after"></div>
+        <ion-grid>
+        	<ion-row>
+        		<ion-col>
+	        		<form #form="ngForm" (ngSubmit)="sendRecipe(form)" method="post">
+				    	<ion-item class="item_login">
+				      		<ion-textarea clearOnEdit="true" [(ngModel)]="detailRecipe" name="detail" rows="15" cols="30" placeholder="Describe un poco tu proceso para realizar la receta"></ion-textarea>
+				    	</ion-item>
+				    	<input type="hidden" name="idDetail" [(ngModel)]="fileUrl2">
+				    	<button type="submit" expand="full" class="submitButton">Enviar</button>
+				  	</form>
+        		</ion-col>
+        	</ion-row>
+        </ion-grid>
+        <div class="before"></div>
+        <div class="after"></div>
+    </ion-toolbar>
+</ion-content>
+ 

@@ -1,0 +1,72 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">{{ p.title }}</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-toolbar>
+		<ion-grid class="ion-no-padding">
+			<ion-row>
+				<ion-col size="12" class="div_news ion-no-padding">
+					<div class="news_con"> 
+						<div class="news_content">
+							<img src="{{ p.cover }}" width="100%" height="200" class="cover_new">
+							<h4 class="title_new">
+								{{ p.title }}
+							</h4>
+						</div>
+						<div class="div_over"></div>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<ion-grid class="ion-padding">
+			<ion-row>
+				<ion-col size="12" style="text-align: justify;">
+					<p [innerHTML]="p.description"></p>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<div class="div_cent">
+						<h3>
+							<b>
+								{{ p.points }} PUNTOS
+							</b>
+						</h3>
+					</div>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<button expand="full" class="submitButton" (click)="canj()">CANJEAR</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
+	<div style="height: 100px"></div>
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col>
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center">
+            </div>
+        </ion-col>
+        <ion-col>
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

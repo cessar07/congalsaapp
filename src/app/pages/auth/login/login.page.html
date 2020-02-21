@@ -1,0 +1,19 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding>
+    <ion-img src="/assets/pez_login.gif"></ion-img>
+  	<form #form="ngForm" (ngSubmit)="login(form)" method="post">
+    	<ion-item class="item_login">
+      		<ion-input ngModel type="text" name="user" placeholder="USUARIO"></ion-input>
+    	</ion-item>
+
+    	<ion-item class="item_login">
+      		<ion-input ngModel type="password" name="password" placeholder="CONTRASEÑA"></ion-input>
+    	</ion-item>
+    	<button type="submit" expand="full" class="submitButton">LOGIN</button>
+  </form>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">EVENTOS</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-toolbar>
+		<ion-grid class="ion-no-padding">
+            <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+                <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando...">
+        			<ion-row>
+        				<ion-col size="12" *ngFor="let e of events" class="div_news ion-no-padding">
+        					<div class="" (click)="viewEvent(e)"> 
+        						<div class="">
+        							<img src="{{ env.API_URL  }}/files/events/{{ e.cover  }}" width="100%" class="cover_new" style="position: relative">
+        						</div>
+        						<div class="news_divider"></div>
+        					</div>
+                            <h4 class="title_new" style="filter: drop-shadow(2px 4px 6px black)">
+                                {{ e.title }}
+                            </h4>
+                            <div class="overL"></div>
+        				</ion-col>
+        			</ion-row>
+        			<div style="height: 100px;"></div>
+                </ion-infinite-scroll-content>
+            </ion-infinite-scroll>
+		</ion-grid>
+  	</ion-toolbar>
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col (click)="ranking()">
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%" class="img_ranking">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center img_perfil">
+            </div>
+        </ion-col>
+        <ion-col (click)="bonus()">
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%" class="img_bonus">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid> 

@@ -1,0 +1,347 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+:root {
+  /** primary **/
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+
+  /** secondary **/
+  --ion-color-secondary: #0cd1e8;
+  --ion-color-secondary-rgb: 12, 209, 232;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #0bb8cc;
+  --ion-color-secondary-tint: #24d6ea;
+
+  /** tertiary **/
+  --ion-color-tertiary: #7044ff;
+  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #633ce0;
+  --ion-color-tertiary-tint: #7e57ff;
+
+  /** success **/
+  --ion-color-success: #10dc60;
+  --ion-color-success-rgb: 16, 220, 96;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0ec254;
+  --ion-color-success-tint: #28e070;
+
+  /** warning **/
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e0b500;
+  --ion-color-warning-tint: #ffd31a;
+
+  /** danger **/
+  --ion-color-danger: #f04141;
+  --ion-color-danger-rgb: 245, 61, 61;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d33939;
+  --ion-color-danger-tint: #f25454;
+
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 34, 34;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --ion-color-medium: #989aa2;
+  --ion-color-medium-rgb: 152, 154, 162;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #86888f;
+  --ion-color-medium-tint: #a2a4ab;
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 244, 244;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+
+.menu_icon{
+    font-size: -webkit-xxx-large;
+}
+.div_cent{
+    text-align: center;
+}
+.img_menu{
+    width: 35%;
+    margin-left: 30%;
+    margin-top: 8px;
+}
+.div_img_menu{
+    text-align: center;
+    border: dashed 2px #7a7a7a;
+    min-height: 110px;
+    border-radius: 7px;
+/*    padding-right: 5px;
+    padding-left: 5px;*/
+    margin-bottom: 20px;
+}
+.h_menu{
+    margin-top: 10px;
+    margin-bottom: 2px;
+    line-height: 1;
+    font-weight: bold;
+    color: #7a7a7a;
+}
+ion-footer{
+    position: fixed;
+    bottom: 0;
+}
+.footer_div_menu{
+    text-align: center;
+}
+.h1_title{
+    margin-top: 9px;
+}
+#gridFooter{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background:white;
+}
+.img_center{
+    background: #111;
+    border-radius: 100%;
+    width: 70px;
+    height: 65px;
+    padding: 10px;
+    margin-top: -30px;
+}
+.menu_up{
+    position: absolute;
+    bottom: 57px;
+    width: 100%;
+    filter: drop-shadow(2px 4px 6px black);
+    z-index:10;
+}
+.title_page{
+    text-align: center;
+}
+.title_new{
+    position: absolute;
+    bottom: 25px;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    z-index: 2;
+}
+.cover_new{
+    position: absolute;
+    top: 0;
+}
+.news_content{
+    min-height: 200px;
+}
+.div_over{
+    background: #111;
+    opacity: 0.5;
+    min-height: 200.5px;
+    margin-top: -200px;
+}
+.news_divider{ 
+    height: 3px;
+    position: relative;
+    margin-top: 20px;
+    border-bottom: dashed 2px #7a7a7a;
+}
+.div_news{
+    margin-top: 20px;
+}
+.user_photo{
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 100%;
+    background-size: cover;
+}
+.user_photo2{
+    width: 80px;
+    height: 80px;
+    background: #8D99A7;
+    border-radius: 100%;
+    background-size: cover;
+}
+.row_user_ranking_1{
+    background: #8D99A7;
+    color: white;
+    border-bottom: dashed 2px #737F8F;
+}
+.row_user_ranking_2{
+    background: #738091;
+    color: white;
+    border-bottom: dashed 2px #8D99A7;
+}
+.row_user_ranking_3{
+    background: #586880;
+    color: white;
+    border-bottom: dashed 2px #8D99A7;
+}
+.row_user_ranking{
+    background: white;
+    color: #8D99A7;
+    border-bottom: dashed 2px #8D99A7;
+}
+.row_user_messages{
+    background: white;
+    color: #8D99A7;
+    border-bottom: solid 1px #8D99A7;
+}
+.span_points{
+    color: #3E4B53;
+    font-size: 23px;
+    font-weight: 600;
+}
+.span_points2{
+    color: #5DBCD2;
+    font-size: 23px;
+    font-weight: 600;
+}
+.position_user{
+    color: #5DBCD2;
+}
+.searchbar-input {
+    background: #FFF !important;
+    border-radius: 15px !important;
+    height: 50px !important;
+    box-shadow: 0px 0px 3px #8D99A7 !important;
+}
+.div_message{
+    background: #eaeaea;
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.div_message2{
+    background: #4CBEFC;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: white;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.div_user_mess{
+    background: #8D99A7;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+.div_user_mess2{
+    background: #4CBEFC;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+.div_perfil_img{
+    min-height: 100px;
+    background: #738091;
+    border: dashed 2px;
+    border-radius: 15px;
+    margin-top: -55px;
+    padding-top: 45px;
+}
+.bonusButton{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: transparent;
+    border: solid 1px #8D99A7;
+    color: #8D99A7;
+}
+.div_bonus{
+    min-height: 105px;
+    background: #738091;
+    border: dashed 2px;
+    border-radius: 15px;
+    margin-top: -145px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    left: 0px;
+}
+.row_bonus{
+    border: dashed 2px;
+    border-radius: 20px;
+}
+.swiper-pagination {
+    bottom: 0px !important;
+}
+.swiper-pagination-bullet-active{
+    background: white;
+    border:solid 2px #F1AF7F;
+}
+ion-title{
+    position: absolute;
+    width: 75%;
+    top: -2px;
+}
+ion-header{
+    height: 50px;
+}
+ion-back-button{
+    margin-top: -40px;
+}
+.modalClass{
+    --max-width: 100% !important;
+    --width: 100% !important;
+    --max-height: 100% !important;
+    margin-left: 5% !important;
+    margin-top: 5% !important;
+    padding: 25px !important;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+.close_icon{
+    font-size: 28px;
+    margin-top: -37px;
+}
+ion-alert{
+ --background: #2CC3F8 !important;
+}
+.alert-wrapper{
+    border: dashed 2px #7a7a7a !important;
+}
+.alert-head{
+    text-align: center !important;
+}
+.alert-title{
+    color: white !important;
+    font-size: 30px !important;
+}
+.alert-message{
+    text-align: center !important;
+    font-size: 25px !important;
+    color: white !important;
+}
+
+.alert-button-inner{
+    font-size: 25px !important;
+    color: white !important;
+}
+ion-backdrop{
+    background-color: gray !important;
+}

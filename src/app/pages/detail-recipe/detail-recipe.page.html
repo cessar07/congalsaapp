@@ -1,0 +1,91 @@
+<ion-header class="ion-no-padding">
+	<br>
+  	<ion-toolbar>
+    	<!-- <ion-title size="large" class="title_page">RECETAS</ion-title> -->
+    	<img src="{{ env.API_URL  }}/files/recipes/{{ r.cover  }}" width="100%">
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-toolbar>
+		<ion-grid>
+			<ion-row>
+				<ion-col size="10" class="div_news ion-no-padding">
+					<span style="text-transform: uppercase;">{{ r.category_name }}</span>
+					<h4>
+						{{ r.title }}
+					</h4>
+				</ion-col>
+                <ion-icon name="add-circle" class="iconAdd" (click)="goSend()"></ion-icon>
+			</ion-row>
+			<ion-row>
+                <ion-col>
+                    <img src="/assets/clock.png" width="11">
+                    <small>
+                        {{ r.time }}
+                    </small>
+                </ion-col>
+                <ion-col>
+                    <ion-icon name="options"></ion-icon>
+                    <small>
+                        {{ r.dif }}
+                    </small>
+                </ion-col>
+                <ion-col>
+                    <img src="/assets/fork.png" width="11">
+                    <small>
+                        {{ r.persons }} Persona(s)
+                    </small>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+            	<ion-col>
+            		<div class="ing_div">
+            			<h4>INGRDIENTES</h4>
+            		</div>
+            		<ion-list lines="none">
+            			<ion-item *ngFor="let i of r.ingredients">
+						    <ion-label><ion-icon name="radio-button-on"></ion-icon> {{ i.item }}</ion-label>
+						</ion-item>
+            		</ion-list>
+            	</ion-col>
+            </ion-row>
+            <ion-row>
+            	<ion-col>
+            		<div class="ing_div">
+            			<h4>PREPARACIÓN</h4>
+            		</div>
+            	</ion-col>
+            </ion-row>
+			<ion-row>
+				<ion-col size="12" style="text-align: justify;">
+					<p [innerHTML]="r.preparation"></p>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
+	<div style="height: 100px"></div>
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col (click)="ranking()">
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center">
+            </div>
+        </ion-col>
+        <ion-col (click)="bonus()">
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid> 
+

@@ -1,0 +1,73 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">EVENTOS</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-toolbar>
+		<ion-grid class="ion-no-padding">
+			<ion-row>
+				<ion-col size="12" class="ion-no-padding">
+					<div class=""> 
+						<div class="">
+							<img src="{{ env.API_URL  }}/files/events/{{ e.cover  }}" width="100%" class="">
+							<h4 class="title_new2">
+								{{ e.title }}
+							</h4>
+							<ion-icon name="add-circle" class="iconAdd" (click)="goSend()"></ion-icon>
+						</div>
+					</div>
+					<div class="infoE">
+						<ion-row>
+							<ion-col size="5">
+								<img src="/assets/adventurer.png" width="35"> <b style="color:white;position: absolute;top: 10px;font-size: 20px;left: 45px;">{{ e.time_total }}</b>
+							</ion-col>
+							<ion-col size="6">
+								<img src="/assets/trekking.png" width="35"> <b style="color:white;position: absolute;top: 10px;font-size: 20px;left: 45px;">{{ e.dif }}</b>
+							</ion-col>
+						</ion-row>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<ion-grid class="ion-padding">
+			<ion-row>
+				<ion-col size="12" style="text-align: justify;">
+					<p>
+						<b>Fecha:</b> {{ e.date_from }}
+					</p>
+					<p>
+						<b>Dirección:</b> {{ e.address }}
+					</p>
+					<p [innerHTML]="e.description"></p>
+					<button expand="full" class="submitButton" (click)="asist()">Asistire</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
+	<!-- <div style="height: 100px"></div> -->
+</ion-content>
+<!-- <img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col (click)="ranking()">
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center">
+            </div>
+        </ion-col>
+        <ion-col (click)="bonus()">
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>  -->

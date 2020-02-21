@@ -1,0 +1,113 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">PERFIL</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-toolbar>
+		<ion-grid class="ion-no-padding">
+			<ion-row>
+				<ion-col class="div_cent">
+					<!-- <img src="/assets/user_icon.png" width="150" style="background: white;border-radius: 100%;margin-top: -25%" class="img_perff" *ngIf="!fileUrl">
+					<img src="{{ fileUrl }}" width="150" style="background: white;border-radius: 100%;margin-top: -25%" class="img_perff" *ngIf="fileUrl"> -->
+					<div id="uploadedPhoto" class="img_perff" (click)="cropUpload()"></div>
+					<ion-icon name="camera" class="icon_ca" (click)="cropUpload2()"></ion-icon>
+					<div class="div_cent div_perfil_img">
+						<h5 style="color: white">{{ userDetail.user }}</h5> <ion-icon name="create" class="icon_edit" (click)="presentModal()"></ion-icon>
+						<h1 style="color: #5DBCD2;margin-top: 0px;font-weight: bold;">{{ userPoints }} PTS</h1>
+					</div>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col size="12" class="div_cent">
+					<h6>
+						<b>Insignias conseguidas</b>
+					</h6>
+				</ion-col>
+				<ion-col size="12" class="div_cent" *ngIf="catadorIns">
+					<img src="/assets/catador.png" width="100">
+					<ion-row>
+						<ion-col size="8"  offset="2" style="border-bottom: dashed 1px;">
+							<p>
+								Sumando puntos extras ganando diferentes recompensas accediendo al cofre diario.
+							</p>
+						</ion-col>
+					</ion-row>
+				</ion-col>
+				<ion-col size="12" class="div_cent" *ngIf="eventIns">
+					<img src="/assets/bbt.png" width="130">
+					<ion-row>
+						<ion-col size="8"  offset="2" style="border-bottom: dashed 1px;">
+							<p>
+								Sumando puntos extras ganando diferentes recompensas accediendo al cofre diario.
+							</p>
+						</ion-col>
+					</ion-row>
+				</ion-col>
+				<ion-col size="12" class="div_cent" *ngIf="recipeIns">
+					<img src="/assets/cocinitas.png" width="130">
+					<ion-row>
+						<ion-col size="8"  offset="2">
+							<p>
+								Sumando puntos extras ganando diferentes recompensas accediendo al cofre diario.
+							</p>
+						</ion-col>
+					</ion-row>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col size="8"  offset="2">
+					<button type="button" expand="full" class="bonusButton" (click)="bonus()">IR A BONUS</button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<div class="div_cent">
+						<h4>
+							<b>Productos canjeados</b>
+						</h4>
+					</div>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+					<ion-list>
+						<ion-item *ngFor="let p of products">
+							<p>
+								<b>{{ p.productInfo.title }}</b> {{ p.date_format }}
+							</p>
+						</ion-item>
+					</ion-list>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
+	<div style="height: 120px;"></div>
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col (click)="ranking()">
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%">
+            </div>
+        </ion-col>
+        <ion-col>
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center">
+            </div>
+        </ion-col>
+        <ion-col>
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

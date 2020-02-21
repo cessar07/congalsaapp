@@ -1,0 +1,89 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">CANAL COCINA</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <h6>
+                    <b>ÚLTIMAS RECETAS</b>
+                </h6>
+                <ion-slides  pager="false" #sliderRecipes> 
+                    <ion-slide *ngFor="let r of lastsRecipes">
+                        <img src="{{ env.API_URL  }}/files/recipes/{{ r.cover  }}" width="100%" style="width: 200px !important;max-height: 120px !important;height: 120px;" (click)="viewRecipe(r)">
+                    </ion-slide>
+                </ion-slides>
+            </ion-row>
+        </ion-grid>
+		<ion-grid class="ion-no-padding">
+            <ion-row>
+                <ion-col>
+                    <h6>
+                        <b>RECETAS</b>
+                    </h6>
+                </ion-col>
+            </ion-row>
+			<ion-row *ngFor="let r of recipes">
+				<ion-col size="12" class="ion-no-padding">
+					<div (click)="viewRecipe(r)">
+						<img src="{{ env.API_URL  }}/files/recipes/{{ r.cover  }}" width="100%">
+					</div>
+                </ion-col>
+                <ion-col size="12">
+                    <span style="text-transform: uppercase;font-size: 12px">{{ r.category_name }}</span> <br>
+                    <div style="height: 5px"></div>
+                    <span>
+                        <b>{{ r.title }}</b>
+                    </span>
+                    <ion-row>
+                        <ion-col>
+                            <ion-icon name="time"></ion-icon>
+                            <span>
+                                {{ r.time }}
+                            </span>
+                        </ion-col>
+                        <ion-col>
+                            <ion-icon name="options"></ion-icon>
+                            <span>
+                                {{ r.dif }}
+                            </span>
+                        </ion-col>
+                        <ion-col>
+                            <ion-icon name="pizza"></ion-icon>
+                            {{ r.persons }} Persona(s)
+                        </ion-col>
+                    </ion-row>
+                    <div style="height: 20px;"></div>
+                </ion-col>
+			</ion-row>
+			<div style="height: 110px;"></div>
+		</ion-grid>
+  	</ion-toolbar>
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col (click)="ranking()">
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%" class="img_ranking">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center img_perfil">
+            </div>
+        </ion-col>
+        <ion-col (click)="bonus()">
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%" class="img_bonus">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid> 

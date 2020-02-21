@@ -1,0 +1,37 @@
+.img_perff{
+	animation-name: from_top;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes from_top {
+	from{margin-top: -25%}
+	to{margin-top: 0%}
+}
+.icon_ca{
+	position: absolute;
+    bottom: 85px;
+    font-size: 36px;
+    right: 138px;
+    background: #7a7a7a;
+    border-radius: 100%;
+    padding: 7px;
+    color: white;
+    border: solid 1px;
+}
+#uploadedPhoto{
+    width: 170px;
+    height: 170px;
+    background: #a7a7a7;
+    border-radius: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 3px;
+    position: relative;
+}
+.icon_edit{
+    position: absolute;
+    margin-left: 75px;
+    margin-top: -35px;
+    font-size: 25px;
+    color: white;
+}

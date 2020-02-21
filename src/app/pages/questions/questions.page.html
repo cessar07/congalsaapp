@@ -1,0 +1,66 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>questions</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+	<ion-slides  pager="true" #mySlider>
+	    <ion-slide *ngFor="let q of questions">
+	    	<!-- <img src="/assets/img_slid.jpg"> -->
+	    	<!-- <video style="width: 100%" autoplay="true" loop="true" *ngIf="q.first == 1" class="vid_q">
+	    		<source src="{{env.API_URL}}/files/videos/{{q.video_info.file}}" type="video/mp4">
+	    	</video>
+	    	<video style="width: 100%" *ngIf="q.first == 0" class="vid_q">
+	    		<source src="{{env.API_URL}}/files/videos/{{q.video_info.file}}" type="video/mp4">
+	    	</video> -->
+	    	<img src="{{env.API_URL}}/files/videos/{{q.video_info.file}}" width="100%">
+	      	<h1 *ngIf="q.first == 1">
+	      		<b>Responde a las preguntas y consigue Puntos Extra</b>
+	      	</h1>
+	      	<ion-grid class="ion-no-padding">
+				<ion-row>
+					<ion-col size="10"  offset="1">
+				      	<div class="div_question">
+				      		{{ q.title }}
+				      	</div>
+				      	<div class="question_options">
+				      		<ion-list>
+				      			<ion-radio-group>
+							  		<ion-item *ngFor="let o of q.options_data">
+							      		<ion-label>{{ o.title }}</ion-label>
+							      		<ion-radio slot="start" value="{{ o.id }}" (click)="addAnswer(o.correct , q , o)"></ion-radio>
+							    	</ion-item>
+							    </ion-radio-group>
+							</ion-list>
+				      	</div>
+				      	<button expand="full" class="submitButton" (click)="nextSlide()">Siguiente</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+	    </ion-slide>
+	    <ion-slide style="text-align: left;">
+	    	<ion-row>
+				<ion-col class="div_cent" id="pyro">
+					<div id="usserPhooto"></div>
+					<div class="div_cent div_perfil_img" style="margin-top: -50px !important">
+						<h5 style="color: white">{{ userDetail ? userDetail.user : '' }}</h5>
+						<h1 style="color: #5DBCD2;margin-top: 0px;font-weight: bold;">Has ganado</h1>
+						<h1 style="color: #5DBCD2;margin-top: 0px;font-weight: bold;">{{ userPoints }} Puntos</h1>
+					</div>
+					<div class="before"></div>
+					<div class="after"></div>
+				</ion-col>
+			</ion-row>
+			<ion-row class="ion-padding">
+				<ion-col>
+					<h2>Resumen de preguntas</h2>
+					<p *ngFor="let q of questions; let i = index">
+						{{ q.title }}  = <b>{{ answers[i] ? answers[i][0] : '' }}</b>
+					</p>
+					<button expand="full" class="submitButton" (click)="getPoints()">Siguiente</button>
+				</ion-col>
+			</ion-row>
+	    </ion-slide>
+  	</ion-slides>
+</ion-content>

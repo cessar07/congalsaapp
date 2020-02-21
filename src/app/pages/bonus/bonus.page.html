@@ -1,0 +1,75 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">BONUS</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-toolbar>
+		<ion-grid>
+			<ion-row>
+				<ion-col class="div_cent">
+					<img src="/assets/bon.png" width="180">
+					<div class="div_bonus"></div>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col class="div_cent" size="8"  offset="2">
+					<p>
+						Sumando puntos extras ganando diferentes recompensas accediendo al cofre diario.
+					</p>
+				</ion-col>
+			</ion-row>
+			<div style="height: 20px"></div>
+			<ion-row class="row_bonus ion-align-items-center" id="semRa" (click)="semRanking()">
+				<ion-col size="7" offset="1">
+					<h5>
+						<b>
+							COFRE <br> SEMANAL
+						</b>
+					</h5>
+				</ion-col>
+				<ion-col siz="3">
+					<img src="/assets/cofre_diario.png" width="88">
+				</ion-col>
+			</ion-row>
+			<div style="height: 20px"></div>
+			<ion-row class="row_bonus ion-align-items-center" id="monthRanking" (click)="monthRanking()">
+				<ion-col size="7" offset="1">
+					<h5>
+						<b>
+							COFRE <br> MENSUAL
+						</b>
+					</h5>
+				</ion-col>
+				<ion-col siz="3">
+					<img src="/assets/cofre_semanal.png" width="65">
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
+	<div style="height: 120px"></div>
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col (click)="ranking()">
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center">
+            </div>
+        </ion-col>
+        <ion-col>
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

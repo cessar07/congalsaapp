@@ -1,0 +1,54 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">MENSAJERÍA</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-toolbar id="scrollingContainer">
+		<ion-grid *ngFor="let m of messages">
+			<ion-row class="ion-align-items-end" *ngIf="userDetails.id != m.userInfo.id">
+				<ion-col size="2">
+					<div class="div_user_mess"></div>
+				</ion-col>
+				<ion-col size="10">
+					<div class="div_message">
+						<p [innerHTML]="m.messageInfo.content" style="margin-top: 0px;margin-bottom: 0px;"></p>					
+					</div>
+				</ion-col>
+			</ion-row>
+			<ion-row class="ion-align-items-end" *ngIf="userDetails.id == m.userInfo.id">
+				<ion-col size="10">
+					<div class="div_message2">
+						<p [innerHTML]="m.messageInfo.content" style="margin-top: 0px;margin-bottom: 0px;"></p>					
+					</div>
+				</ion-col>
+				<ion-col size="2">
+					<div class="div_user_mess2"></div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<div style="height: 60px;"></div>
+	</ion-toolbar>
+</ion-content>
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col size="1">
+        	<ion-icon name="add-circle" class="icon_message"></ion-icon>
+        </ion-col>
+        <ion-col size="1">
+        	<ion-icon name="photos" class="icon_message"></ion-icon>
+        </ion-col>
+        <ion-col size="8">
+        	<ion-item class="input_send">
+			  	<ion-input placeholder="Escribir mensaje" [(ngModel)]="text" class="text_send"></ion-input>
+			</ion-item>
+        </ion-col>
+        <ion-col size="2">
+        	<ion-icon name="send" class="icon_message" (click)="sendM()"></ion-icon>
+        </ion-col>
+    </ion-row>
+</ion-grid>

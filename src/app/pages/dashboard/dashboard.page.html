@@ -1,0 +1,87 @@
+<ion-content class="ion-padding">
+	<ion-grid>
+	  	<ion-row>
+	    	<ion-col size="2" class="ion-align-items-center">
+	      		<div>
+	        		<ion-buttons slot="star">
+		      			<ion-menu-button class="men_but">
+		      				<ion-icon name="menu" class="menu_icon"></ion-icon>
+		      			</ion-menu-button>
+		    		</ion-buttons>
+	      		</div>
+	    	</ion-col>
+		    <ion-col size="8" class="ion-align-items-center ion-justify-content-center div_cent">
+		      	<div>
+		        	<h1 class="h1_title">PRINCIPAL</h1>
+		      	</div>
+		    </ion-col>
+	  	</ion-row>
+	</ion-grid>
+	<ion-grid>
+		<ion-row class="ion-align-items-center">
+			<ion-col size="6">
+	      		<div class="div_img_menu" id="div_msj" (click)="messages()">
+	      			<h6 class="h_menu">MENSAJERIA PRIVADA</h6>
+	        		<ion-img src="/assets/chat.png" class="img_menu"></ion-img>
+	      		</div>
+	    	</ion-col>
+	    	<ion-col size="6">
+	      		<div class="div_img_menu" id="div_events" (click)="events()">
+	      			<h6 class="h_menu">EVENTOS</h6>
+	        		<ion-img src="/assets/eventos.png" class="img_menu"></ion-img>
+	      		</div>
+	    	</ion-col>
+		</ion-row>
+		<ion-row class="ion-align-items-center">
+			<ion-col size="6">
+	      		<div class="div_img_menu" id="div_news" (click)="news()">
+	      			<h6 class="h_menu">NOTICIAS</h6>
+	        		<ion-img src="/assets/noticias.png" class="img_menu"></ion-img>
+	      		</div>
+	    	</ion-col>
+	    	<ion-col size="6">
+	      		<div class="div_img_menu" id="div_recipe" (click)="recipes()">
+	      			<h6 class="h_menu">CANAL <br> COCINA</h6>
+	        		<ion-img src="/assets/cocina.png" class="img_menu"></ion-img>
+	      		</div>
+	    	</ion-col>
+		</ion-row>
+		<ion-row class="ion-align-items-center">
+			<ion-col size="6">
+	      		<div class="div_img_menu" id="div_cofre" (click)="bonus2()">
+	      			<h6 class="h_menu">MI COFRE</h6>
+	        		<ion-img src="/assets/cofre.png" class="img_menu"></ion-img>
+	      		</div>
+	    	</ion-col>
+	    	<ion-col size="6">
+	      		<div class="div_img_menu" id="div_socials" (click)="socials()">
+	      			<h6 class="h_menu">BENEFICIOS CORPORATIVOS</h6>
+	        		<ion-img src="/assets/corporativos.png" class="img_menu"></ion-img>
+	      		</div>
+	    	</ion-col>
+		</ion-row>
+	</ion-grid>
+  	<!-- <div *ngIf="user != undefined">
+      	Welcome 
+  	</div> -->
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col (click)="ranking()">
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%" class="img_ranking">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center img_perfil">
+            </div>
+        </ion-col>
+        <ion-col (click)="bonus()">
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%" class="img_bonus">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

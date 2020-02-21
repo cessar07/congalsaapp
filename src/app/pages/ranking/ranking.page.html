@@ -1,0 +1,60 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">RANKING GLOBAL</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-toolbar>
+		<ion-grid class="ion-no-padding">
+			<ion-row *ngFor="let u of rankingData" class="ion-align-items-center {{ u.rowClass }}">
+				<ion-col size="3">
+					<div class="user_photo" id="user_photo2_{{ u.id }}"></div>
+				</ion-col>
+				<ion-col size="6" class="div_cent">
+					<h5 *ngIf="u.id != token">
+						{{ u.user ? u.user : u.name}}
+					</h5>
+					<h5 *ngIf="u.id == token">
+						Tú
+					</h5>
+					<h5>
+						<span class="span_points">{{ u.points ? u.points : '0' }}</span> Puntos
+					</h5>
+				</ion-col>
+				<ion-col size="3">
+					<img src="/assets/1.png" width="70" *ngIf="u.position == 1">
+					<img src="/assets/2.png" width="70" *ngIf="u.position == 2">
+					<img src="/assets/3.png" width="70" *ngIf="u.position == 3">
+					<h4 *ngIf="u.position > 3">
+						{{ u.position }}
+					</h4>
+				</ion-col>
+			</ion-row>
+			<div style="height: 100px;"></div>
+		</ion-grid>
+  	</ion-toolbar>
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col>
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center">
+            </div>
+        </ion-col>
+        <ion-col>
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

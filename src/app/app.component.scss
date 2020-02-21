@@ -1,0 +1,55 @@
+.my-custom-menu {
+  --background-color: #7a7a7a;
+}
+.div_cen{
+	text-align: center;
+	padding-top: 50px;
+	color:white;
+	background: #2D2D37;
+	height: 100%;
+	h4{
+		margin-top: 0px
+	}
+	img{
+		width: 20%;
+	}
+	.logoImg{
+		position: absolute;
+    	bottom: 10%;
+    	left: 10%;
+    	width: 80%;
+	}
+}
+#imgClose{
+	width: 25px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.divider{
+	height: 40px;
+}
+.div_2{
+	text-align: justify;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.h5_info{
+	position: absolute;
+    left: 35%;
+    bottom: 2%;
+}
+.img_icon_menu{
+	width: 20px !important;
+	margin-right: 15px;
+}
+#uploadedPhoto2{
+    width: 140px;
+    height: 140px;
+    background: #a7a7a7;
+    border-radius: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 3px;
+    position: relative;
+}

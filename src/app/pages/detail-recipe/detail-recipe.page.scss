@@ -1,0 +1,32 @@
+ion-toolbar{
+	margin-top: -20px;
+}
+ion-buttons{
+	position: absolute;
+	top: 15px;
+}
+.ing_div{
+	background: #7a7a7a;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 7px;
+    border: dashed 2px white;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+ion-header{
+    height:auto
+}
+ion-back-button{
+    margin-top: 0px;
+    filter: drop-shadow(2px 4px 6px black);
+    color: white !important;
+}
+.iconAdd{
+    position: absolute;
+    right: 10px;
+    font-size: 60px;
+    top: 25px;
+    color: #03a9f3;
+}

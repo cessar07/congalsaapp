@@ -1,0 +1,77 @@
+<ion-header>
+	<br>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">MENSAJERÍA</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-toolbar>
+		<ion-grid class="ion-no-padding">
+			<ion-row>
+				<ion-slides  pager="false" #sliderMessages>
+                    <ion-slide *ngFor="let u of usersApp">
+                    	<div class="div_cent" (click)="goMessage(u.id)">
+	                    	<div id="user_photo_{{ u.id }}" style="width: 60px;height: 60px;border-radius: 100%;background:#7a7a7a;border: solid 1.5px;margin-right: auto;margin-left: auto;"></div>
+	                        <small class="spanUser">{{ u.name.split(' ' , 1) }}</small>
+	                        <span class="connectedOff" id="userCon_{{ u.id }}"></span>
+                    	</div>
+                    </ion-slide>
+                </ion-slides>
+			</ion-row>
+		</ion-grid>
+		<ion-grid class="ion-no-padding"> 
+			<ion-row>
+				<ion-col>
+					<ion-searchbar placeholder="Buscar"></ion-searchbar>
+				</ion-col>
+			</ion-row>
+			<div style="height: 20px;"></div>
+			<ion-row *ngFor="let g of groups" class="ion-align-items-center row_user_messages" (click)="goMessage(g.userInfo2.id)" style="border-bottom: none;">
+				<ion-col size="3" *ngIf="g.messages.length > 0">
+					<div class="user_photoo" id="userPho_{{ g.id }}" style="width: 70px;height: 70px;border-radius: 100%;border: solid 2px;margin-left: 10px;"></div>
+				</ion-col>
+				<ion-col size="9" *ngIf="g.messages.length > 0">
+					<ion-row class="ion-align-items-center">
+						<ion-col>
+							<h5 style="color: black">{{ g.userInfo2.name }}</h5>
+							<p [innerHTML]="g.messages[g.messages.length - 1].messageInfo.content" style="margin-top: 0px;margin-bottom: 0px"></p>
+						</ion-col>
+					</ion-row>
+				</ion-col>
+				<hr style="background-color: #7a7a7a;width: 100%" *ngIf="g.messages.length > 0">
+			</ion-row>
+			<ion-row *ngIf="!groups">
+				<ion-col>
+					<div class="div_cent">
+						<h4>Sin chats recientes</h4>
+					</div>
+				</ion-col>
+			</ion-row>
+			<div style="height: 100px;"></div>
+		</ion-grid>
+  	</ion-toolbar>
+</ion-content>
+<img src="assets/footer-bg.svg" class="menu_up">
+<ion-grid id="gridFooter" *ngIf="userCheck != false">
+    <ion-row>
+        <ion-col (click)="ranking()">
+            <div class="div_cent">
+                <img src="/assets/ranking.png" width="20%">
+            </div>
+        </ion-col>
+        <ion-col (click)="perfil()">
+            <div class="div_cent">
+                <img src="/assets/pez.png" width="20%" class="img_center">
+            </div>
+        </ion-col>
+        <ion-col (click)="bonus()">
+            <div class="div_cent">
+                <img src="/assets/red.png" width="30%">
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

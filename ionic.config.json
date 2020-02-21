@@ -1,0 +1,7 @@
+{
+  "name": "congalsa",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

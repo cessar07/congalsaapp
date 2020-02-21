@@ -1,0 +1,34 @@
+.title_new2{
+	position: absolute;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    z-index: 2;
+    top: 0px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.iconAdd{
+        position: absolute;
+    right: 10px;
+    font-size: 60px;
+    top: 5px;
+    color: #03a9f3;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.infoE{
+	position: absolute;
+    width: 100%;
+    bottom: 14px;
+    /*filter: drop-shadow(2px 4px 6px black);*/
+}
+.submitButton{
+	width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: transparent;
+    border: solid 2px #2CC3F8;
+    color: #2CC3F8;
+    text-transform: uppercase;
+    font-weight: bolder;
+}

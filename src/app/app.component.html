@@ -1,0 +1,53 @@
+<ion-app>
+    <ion-split-pane contentId="main-content">
+        <ion-menu contentId="main-content" side="start" type="overlay" class="my-custom-menu">
+            <ion-content>
+                <img src="/assets/close_menu.png" id="imgClose" (click)="closeMenu()">
+                <div class="div_cen">
+                    <div id="uploadedPhoto2" class="img_perff" (click)="perfil()"></div>
+                    <h4>
+                        {{ userDetail ? userDetail.user : '' }}
+                    </h4>
+                    <div class="divider"></div>
+                    <div class="div_2">
+                       <!--  <h5 (click)="perfil()">
+                            <img src="/assets/user.png" class="img_icon_menu"> Editar perfil
+                        </h5> -->
+                        <div (click)="perfil()">
+                            <img src="/assets/user.png" class="img_icon_menu">
+                            <b>Editar perfil</b>
+                        </div>
+                        <div style="height: 25px"></div>
+                        <div (click)="socials()">
+                            <img src="/assets/coupon.png" class="img_icon_menu" style="width: 21px !important"> 
+                            <b style="position: absolute;margin-top: 3px">Mejoras Sociales</b>
+                        </div>
+                        <div style="height: 25px"></div>
+                        <div>
+                            <img src="/assets/gear.png" class="img_icon_menu"> 
+                            <b style="position: absolute;margin-top: 2px">Ajustes</b>
+                        </div>
+                        <div style="height: 25px"></div>
+                        <div (click)="logout()">
+                            <img src="/assets/logout.png" class="img_icon_menu">
+                            <b style="position: absolute;margin-top: 2px">Salir</b>
+                        </div>
+                    </div>
+                    <img src="/assets/logo_blanco.png" class="logoImg">
+                    <h5 class="h5_info">Versión 1.0</h5>
+                </div>
+                <!-- <ion-list>
+                    <ion-item (click)="logout()">
+                        <ion-icon slot="start" name="log-out"></ion-icon>
+                        <ion-label>
+                            Salir
+                        </ion-label>
+                    </ion-item>
+                </ion-list> -->
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+</ion-app>
+
+

@@ -1,0 +1,25 @@
+<ion-header>
+	<div style="height: 50px"></div>
+  	<ion-toolbar>
+    	<ion-title size="large" class="title_page">EDITAR USUARIO</ion-title>
+     	<ion-buttons slot="start">
+      		<ion-icon name="close" class="close_icon" (click)="closeModal()"></ion-icon>
+    	</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<div style="height: 110px"></div>
+	<ion-grid class="ion-no-padding">
+		<ion-row>
+			<ion-col class="div_cent">
+				<form #form="ngForm" (ngSubmit)="updateUser(form)" method="post">
+			    	<ion-item class="item_login">
+			      		<ion-input ngModel="{{ username }}" type="text" name="user" placeholder="Nuevo usuario" value="Epale"></ion-input>
+			    	</ion-item>
+			    	<button type="submit" expand="full" class="submitButton">Actualizar</button>
+			  	</form>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
+
